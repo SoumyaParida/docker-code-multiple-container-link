@@ -7,4 +7,5 @@ WORKDIR /usr/src/mimic/
 RUN pip install bottle
 RUN pip install pymongo
 RUN pwd
-CMD [ "python", "myapp/webservice.py"]
+EXPOSE 8000
+CMD [ "python", "myapp/webservice.py", "-p 8000"]
