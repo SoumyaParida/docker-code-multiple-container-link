@@ -15,5 +15,5 @@ CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
 CMD [ "python", "webservice.py", "-p 8000"]
 RUN ls
-CMD ["docker-entrypoint2.sh"]
+CMD ["docker-entrypoint2.sh", "-p 8000:8000"]
 CMD ["sh"]
