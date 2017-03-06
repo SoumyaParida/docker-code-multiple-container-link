@@ -35,7 +35,7 @@ def do_index():
     records=db.strings.find()
     for test in records:
         blocks+='"string value:"' + str(test) + '</div>'+'\n'
-    blocks += '<div style="clear:both"><a href="http://localhost:8000">Go back.</a></div>'
+    #blocks += '<div style="clear:both"><a href="http://localhost:8000">Go back.</a></div>'
     return blocks
 
 
