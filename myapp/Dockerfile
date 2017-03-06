@@ -10,8 +10,10 @@ RUN pwd
 EXPOSE 8000
 WORKDIR /usr/src/mimic/myapp/
 RUN pwd
+RUN cd /usr/src/mimic/myapp/ && ls
 ENTRYPOINT ["docker-entrypoint1.sh"]
 CMD ["sh"]
 CMD [ "python", "webservice.py", "-p 8000"]
+RUN ls
 ENTRYPOINT ["docker-entrypoint2.sh"]
 CMD ["sh"]
