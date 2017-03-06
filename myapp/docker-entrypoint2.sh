@@ -1,0 +1,1 @@
+docker run --name webservice -p 8000:8000 -v $(pwd)/myapp:$(pwd)/myapp --link mongo:mongo -d webservice

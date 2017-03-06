@@ -8,6 +8,8 @@ RUN pip install bottle
 RUN pip install pymongo
 RUN pwd
 EXPOSE 8000
-ENTRYPOINT ["--name mongo -d mongo"]
-CMD [ "python", "myapp/webservice.py", "-p 8000"]
-ENTRYPOINT ["--name webservice --link mongo:mongo -d myapp/webservice"]
+ENTRYPOINT ["docker-entrypoint1.sh"]
+CMD ["sh"]
+CMD [ "python", "webservice.py", "-p 8000"]
+ENTRYPOINT ["docker-entrypoint2.sh"]
+CMD ["sh"]
