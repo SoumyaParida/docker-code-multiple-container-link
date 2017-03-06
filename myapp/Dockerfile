@@ -1,4 +1,5 @@
 FROM python:3-onbuild
-ADD . /code
-WORKDIR /code
-CMD [ "python", "./webservice.py" ]
+# Install app dependencies
+RUN pip install -r requirements.txt
+EXPOSE  8000
+CMD [ "python", "./webservice.py" , "-p 8000"]

@@ -41,5 +41,5 @@ def do_index():
 
 app = default_app()
 
-debug(True)
+#debug(True)
 run(host='0.0.0.0', port=8000, reloader=True)
