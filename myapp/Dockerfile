@@ -1,6 +1,7 @@
 FROM python:3
 RUN mkdir /usr/src/mimic
-COPY . /usr/src/mimic
+COPY . /usr/src/mimic/
+RUN cd /usr/src/mimic/ && ls
 ADD . /usr/src/mimic/
 WORKDIR /usr/src/mimic/
 RUN pip install bottle
