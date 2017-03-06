@@ -13,7 +13,7 @@ RUN pwd
 RUN cd /usr/src/mimic/myapp/ && ls
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
-CMD [ "python", "webservice.py", "-p 8000"]
+CMD [ "python", "webservice.py"]
 RUN ls
-CMD ["docker-entrypoint2.sh", "-p 8000:8000"]
+CMD ["docker-entrypoint2.sh", "8000:8000"]
 CMD ["sh"]
