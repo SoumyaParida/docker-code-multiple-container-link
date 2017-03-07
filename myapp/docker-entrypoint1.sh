@@ -1,1 +1,1 @@
-docker run -entrypoint="mongo"--name mongo 
+docker run -entrypoint="/bin/bash" --name mongo -d mongo
