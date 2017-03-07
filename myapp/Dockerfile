@@ -12,6 +12,6 @@ ENV PORT 80 27017
 EXPOSE 80 27017
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
-
 CMD [ "python", "webservice.py"]
 CMD ["docker-entrypoint2.sh"]
+CMD ["sh"]
