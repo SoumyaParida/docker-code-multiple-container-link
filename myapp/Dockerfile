@@ -15,3 +15,5 @@ ENV PORT 27017
 EXPOSE 27017
 ENTRYPOINT ["mongo"]
 CMD ["--name mongo"]
+ENTRYPOINT ["webservice"]
+CMD ["--name webservice -p "8000:8000" --link mongo:some-development-mongo-host"]
