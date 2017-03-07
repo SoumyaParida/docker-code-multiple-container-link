@@ -8,10 +8,10 @@ RUN pip install bottle
 RUN pip install pymongo
 RUN pwd
 WORKDIR /usr/src/mimic/myapp/
+ENV PORT 80 27017
+EXPOSE 80 27017
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
-ENV PORT 80
-EXPOSE 80
+
 CMD [ "python", "webservice.py"]
 CMD ["docker-entrypoint2.sh"]
-CMD ["sh"]
