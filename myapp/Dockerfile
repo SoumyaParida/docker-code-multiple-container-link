@@ -15,5 +15,5 @@ CMD ["sh"]
 WORKDIR /usr/src/mimic/myapp/
 CMD [ "python", "webservice.py"]
 WORKDIR /usr/src/mimic/myapp/
-CMD ["docker-entrypoint2.sh"]
+ENTRYPOINT ["docker-entrypoint2.sh"]
 CMD ["sh"]
