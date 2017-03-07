@@ -11,6 +11,6 @@ WORKDIR /usr/src/mimic/myapp/
 ENV PORT 8000 27017
 EXPOSE 8000 27017
 WORKDIR /usr/src/mimic/myapp/
-CMD [ "python", "webservice.py"]
 WORKDIR /usr/src/mimic/myapp/
-ENTRYPOINT ["docker-entrypoint1.sh"]
+CMD ["docker-entrypoint1.sh"]
+CMD ["sh"]
