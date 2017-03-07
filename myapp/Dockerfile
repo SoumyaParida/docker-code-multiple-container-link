@@ -12,5 +12,5 @@ CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
 EXPOSE 33203
 CMD [ "python", "webservice.py"]
-CMD ["docker-entrypoint2.sh", "33203"]
+CMD ["docker-entrypoint2.sh"]
 CMD ["sh"]
