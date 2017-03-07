@@ -11,6 +11,3 @@ WORKDIR /usr/src/mimic/myapp/
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
 CMD [ "python", "webservice.py"]
-EXPOSE 8000
-CMD ["docker-entrypoint2.sh", "8000"]
-CMD ["sh"]
