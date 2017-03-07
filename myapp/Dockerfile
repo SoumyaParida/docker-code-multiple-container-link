@@ -14,4 +14,6 @@ CMD ["python","webservice.py"]
 ENV PORT 27017
 EXPOSE 27017
 RUN chmod +x $MYPATH/docker-entrypoint1.sh
-CMD ["/usr/src/mimic/myapp/docker-entrypoint1.sh"]
+ENTRYPOINT $MYPATH/docker-entrypoint1.sh;  /bin/bash
+RUN chmod +x $MYPATH/docker-entrypoint2.sh
+ENTRYPOINT $MYPATH/docker-entrypoint2.sh; /bin/bash
