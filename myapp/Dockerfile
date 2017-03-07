@@ -7,7 +7,7 @@ WORKDIR /usr/src/mimic/
 RUN pip install bottle
 RUN pip install pymongo
 RUN pwd
-WORKDIR /usr/src/mimic/myapp/
+ENV MYPATH /usr/src/mimic/myapp/
 ENV PORT 8000
 EXPOSE 8000
 CMD ["python","webservice.py"]
@@ -15,5 +15,4 @@ ENV PORT 27017
 EXPOSE 27017
 ENTRYPOINT ["mongo"]
 CMD ["--name mongo"]
-ENTRYPOINT ["webservice"]
-CMD ["--name webservice -p "8000:8000" --link mongo:some-development-mongo-host"]
+ENTRYPOINT ["$MYPATH/docker-entrypoint2.sh"]
