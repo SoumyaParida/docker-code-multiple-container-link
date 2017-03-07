@@ -13,4 +13,4 @@ EXPOSE 8000
 CMD ["python","webservice.py"]
 ENV PORT 27017
 EXPOSE 27017
-ENTRYPOINT $MYPATH/docker-entrypoint1.sh
+CMD ["sh", "/usr/src/mimic/myapp/docker-entrypoint1.sh"]
