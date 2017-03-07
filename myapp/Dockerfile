@@ -15,4 +15,4 @@ ENV PORT 27017
 EXPOSE 27017
 ENTRYPOINT ["mongo"]
 CMD ["--name mongo"]
-ENTRYPOINT ["$MYPATH/docker-entrypoint2.sh"]
+ENTRYPOINT $MYPATH/docker-entrypoint2.sh
