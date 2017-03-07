@@ -8,6 +8,10 @@ RUN pip install bottle
 RUN pip install pymongo
 RUN pwd
 WORKDIR /usr/src/mimic/myapp/
-ENV PORT 8000 27017
-EXPOSE 8000 27017
+ENV PORT 8000
+EXPOSE 8000
 CMD ["python","webservice.py"]
+ENV PORT 27017
+EXPOSE 27017
+ENTRYPOINT ["mongo"]
+CMD ["--name mongo"]
