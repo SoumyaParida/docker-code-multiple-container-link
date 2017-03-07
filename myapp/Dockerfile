@@ -10,7 +10,8 @@ RUN pwd
 WORKDIR /usr/src/mimic/myapp/
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
-EXPOSE 8000
+ENV PORT 80
+EXPOSE 80
 CMD [ "python", "webservice.py"]
 CMD ["docker-entrypoint2.sh"]
 CMD ["sh"]
