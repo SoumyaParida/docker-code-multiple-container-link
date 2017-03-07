@@ -14,4 +14,3 @@ CMD ["python","webservice.py"]
 ENV PORT 27017
 EXPOSE 27017
 ENTRYPOINT $MYPATH/docker-entrypoint1.sh
-ENTRYPOINT $MYPATH/docker-entrypoint2.sh
