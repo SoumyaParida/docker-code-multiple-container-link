@@ -10,7 +10,7 @@ RUN pwd
 WORKDIR /usr/src/mimic/myapp/
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
-EXPOSE 8000 3000:3000
+EXPOSE 3000 3000:3000
 CMD [ "python", "webservice.py"]
 CMD ["docker-entrypoint2.sh", "3000:3000"]
 CMD ["sh"]
