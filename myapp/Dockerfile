@@ -12,6 +12,3 @@ EXPOSE 8000 27017
 CMD ["docker-entrypoint1.sh"]
 CMD ["sh"]
 CMD [ "python", "webservice.py"]
-RUN ls
-CMD ["docker-entrypoint2.sh", "8000:8000"]
-CMD ["sh"]
