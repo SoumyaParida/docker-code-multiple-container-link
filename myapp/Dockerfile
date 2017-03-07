@@ -10,4 +10,4 @@ RUN pwd
 WORKDIR /usr/src/mimic/myapp/
 ENV PORT 8000 27017
 EXPOSE 8000 27017
-CMD ["python","webservice"]
+CMD ["python","webservice.py"]
