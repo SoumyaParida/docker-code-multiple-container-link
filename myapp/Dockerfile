@@ -13,4 +13,5 @@ EXPOSE 8000
 CMD ["python","webservice.py"]
 ENV PORT 27017
 EXPOSE 27017
-ENTRYPOINT ["mongo --name mongo"]
+RUN chmod +x $MYPATH/docker-entrypoint1.sh
+ENTRYPOINT $MYPATH/docker-entrypoint1.sh;  mongo

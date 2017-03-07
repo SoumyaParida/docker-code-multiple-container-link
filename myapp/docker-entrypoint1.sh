@@ -1,1 +1,1 @@
-docker run --name mongo --privileged mongo /bin/bash
+docker run -entrypoint="mongo"--name mongo 
